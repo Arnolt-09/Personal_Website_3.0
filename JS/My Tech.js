@@ -23,3 +23,39 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// FIX: Safe back button handler untuk My Tech section
+const backButton = document.querySelector('.back-button'); // Sesuaikan dengan class tombol back kamu
+
+if (backButton) {
+    backButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Cek apakah ada history sebelumnya
+        if (document.referrer && document.referrer.includes(window.location.hostname)) {
+            // Jika ada history internal, kembali ke halaman sebelumnya
+            window.history.back();
+        } else {
+            // Jika tidak ada history atau dari external, redirect ke homepage atau section career
+            window.location.href = '#career'; // Atau bisa '/' untuk homepage
+            
+            // Atau kalau mau ke halaman tertentu:
+            // window.location.href = '/career.html';
+        }
+    });
+}
+
+// ALTERNATIF: Jika kamu punya beberapa tombol back
+document.querySelectorAll('.back-btn, .btn-back, [data-action="back"]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Safe navigation
+        if (document.referrer && document.referrer.includes(window.location.hostname)) {
+            window.history.back();
+        } else {
+            // Redirect ke halaman utama career section
+            window.location.href = '#career';
+        }
+    });
+});
