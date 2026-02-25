@@ -1,3 +1,14 @@
+console.log('Script loaded successfully!');
+
+// Wrap semua kode dengan DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM ready!');
+    
+    // Letakkan SEMUA kode kamu di sini
+    // Termasuk kode tech cards dan back button
+    
+});
+
 // Get all tech cards
 const techCards = document.querySelectorAll('.tech-card');
 
