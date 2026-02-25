@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-5px);
+}
+
+.back-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 25px;
+}
+
+.tech-card {
+    background: #1a1a1a;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #2a2a2a;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-color: #3a3a3a;
+}
+
+.tech-image {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-logo {
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover .tech-logo {
+    transform: scale(1.1);
+}
+
+.tech-content {
+    padding: 25px;
+}
+
+.tech-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tech-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tech-date {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.tech-description {
+    font-size: 1rem;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    padding: 8px 16px;
+    background: #2a2a2a;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+    border: 1px solid #3a3a3a;
+}
+
+/* Specific backgrounds for each tech */
+.js-bg {
+    background: #f7df1e;
+}
+
+.js-bg .tech-icon {
+    color: #000;
+    font-weight: 700;
+}
+
+.laravel-bg {
+    background: #090202;
+}
+
+.mysql-bg {
+    background: #000000;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.tech-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.tech-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.tech-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-image {
+        height: 240px;
+    }
+
+    .tech-icon {
+        font-size: 5rem;
+    }
+
+    .back-button {
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .container {
+        margin-top: 60px;
+    }
+}

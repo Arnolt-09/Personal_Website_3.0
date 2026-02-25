@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education</title>
+    <link rel="stylesheet" href="CSS/My Education.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Home
+    </a>
+
+    <div class="education-container">
+        <div class="education-header">
+            <h1>My Education <span class="emoji">🎓</span></h1>
+        </div>
+
+        <div class="education-description">
+            <p>My educational journey began at SMP Puhua, where I completed my junior high school education. During this period, I started developing an interest in technology and the digital world. After graduating from SMP Puhua, I continued my studies at SMK Telkom Purwokerto, majoring in Software Engineering (Rekayasa Perangkat Lunak / RPL). At SMK Telkom Purwokerto, I am currently deepening my knowledge in software development, programming, and digital technology, which supports my passion for building applications and exploring the tech industry.</p>
+        </div>
+
+        <div class="schools-container">
+            <a href="https://maps.app.goo.gl/YFJSKNXbq92tfYYJ7" target="_blank" class="school-card school-card-1">
+                <span class="school-icon">🎓</span>
+                <h3>Puhua Junior High School</h3>
+                <p>Junior high school education where I first discovered my passion for technology and the digital world.</p>
+                <span class="school-year">2021 - 2023</span>
+                <div class="location-badge">
+                    📍 View Location
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/Nsk2Htgxea4YYNHVA" target="_blank" class="school-card school-card-2">
+                <span class="school-icon">🎓</span>
+                <h3>Telkom Vocational High School Purwokerto</h3>
+                <p>Currently studying Software Engineering (RPL), focusing on software development, programming, and digital technology.</p>
+                <span class="school-year">2024 - Till Now</span>
+                <div class="location-badge">
+                    📍 View Location
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="JS/My Education.js"></script>
+    <link rel="stylesheet" href="CSS/Chatbot.css">
+    <!-- Chat Toggle Button -->
+<button class="chatbot-toggle" id="chatbotToggle">
+    <svg viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+    </svg>
+</button>
+
+<!-- Chat Container -->
+<div class="chatbot-container" id="chatbotContainer">
+    <!-- Header -->
+    <div class="chatbot-header">
+        <div class="chatbot-header-info">
+            <div class="chatbot-avatar">🦖</div>
+            <div class="chatbot-info">
+                <h3>T-Rex</h3>
+                <div class="chatbot-status">
+                    <span class="chatbot-status-dot"></span>Online
+                </div>
+            </div>
+        </div>
+        <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="chatbot-messages" id="chatbotMessages">
+        <!-- Messages will be inserted here -->
+    </div>
+
+    <!-- Typing Indicator -->
+    <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
+        <div class="chatbot-message-avatar">🦖</div>
+        <div class="chatbot-typing-dots">
+            <div class="chatbot-typing-dot"></div>
+            <div class="chatbot-typing-dot"></div>
+            <div class="chatbot-typing-dot"></div>
+        </div>
+    </div>
+
+    <!-- Quick Replies -->
+    <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+        <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
+        <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons">
+            <!-- Quick replies will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Input -->
+    <div class="chatbot-input">
+        <input 
+            type="text" 
+            id="chatbotMessageInput" 
+            placeholder="Ketik pertanyaan Anda..."
+            autocomplete="off"
+        />
+        <!-- TOMBOL CLEAR HISTORY - BARU DITAMBAHKAN -->
+        <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">
+            🗑️
+        </button>
+        <button class="chatbot-send-btn" id="chatbotSendBtn">
+            <svg viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script src="JS/Chatbot.js"></script>
+</body>
+</html>

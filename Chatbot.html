@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Chatbot - FAQ Assistant</title>
+    <link rel="stylesheet" href="CSS/Chatbot.css">
+</head>
+<body>
+
+    <!-- Chat Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+        </svg>
+    </button>
+
+    <!-- Chat Container -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <!-- Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <div class="chatbot-avatar">🦖</div>
+                <div class="chatbot-info">
+                    <h3>FAQ Assistant</h3>
+                    <div class="chatbot-status">
+                        <span class="chatbot-status-dot"></span>Online
+                    </div>
+                </div>
+            </div>
+            <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
+        </div>
+
+        <!-- Messages -->
+        <div class="chatbot-messages" id="chatbotMessages">
+            <!-- Messages will be inserted here -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
+            <div class="chatbot-message-avatar">🦖</div>
+            <div class="chatbot-typing-dots">
+                <div class="chatbot-typing-dot"></div>
+                <div class="chatbot-typing-dot"></div>
+                <div class="chatbot-typing-dot"></div>
+            </div>
+        </div>
+
+        <!-- Quick Replies -->
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+            <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
+            <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons">
+                <!-- Quick replies will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Input -->
+        <div class="chatbot-input">
+            <input 
+                type="text" 
+                id="chatbotMessageInput" 
+                placeholder="Ketik pertanyaan Anda..."
+                autocomplete="off"
+            />
+            <button class="chatbot-send-btn" id="chatbotSendBtn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="JS/Chatbot.js"></script>
+</body>
+</html>

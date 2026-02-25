@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Saya</title>
+    <link rel="stylesheet" href="CSS/CV.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Home
+    </a>
+    
+    <div class="container">
+        <div class="header">
+            <h1>📄 Curriculum Vitae</h1>
+            <p>Lihat CV saya langsung di browser</p>
+        </div>
+        
+        <div class="controls">
+            <a href="CV/CV 2026.pdf" download class="btn btn-primary">
+                ⬇️ Download CV
+            </a>
+            <a href="CV/CV 2026.pdf" target="_blank" class="btn btn-secondary">
+                🔗 Buka di Tab Baru
+            </a>
+        </div>
+        
+        <!-- Cara 1: Menggunakan iframe (paling umum) -->
+        <iframe 
+            src="CV/CV 2026.pdf" 
+            class="pdf-viewer"
+            title="CV PDF Viewer">
+        </iframe>
+        
+        <!-- Fallback jika browser tidak support -->
+        <div class="fallback">
+            <h2>Browser tidak mendukung tampilan PDF</h2>
+            <p>Silakan download CV untuk melihatnya</p>
+            <a href="CV/CV 2026.pdf" download class="btn btn-primary">Download CV</a>
+        </div>
+    </div>
+    <script src="JS/My Education.js"></script>
+    <link rel="stylesheet" href="CSS/Chatbot.css">
+    !-- Chat Toggle Button -->
+<button class="chatbot-toggle" id="chatbotToggle">
+    <svg viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+    </svg>
+</button>
+
+<!-- Chat Container -->
+<div class="chatbot-container" id="chatbotContainer">
+    <!-- Header -->
+    <div class="chatbot-header">
+        <div class="chatbot-header-info">
+            <div class="chatbot-avatar">🦖</div>
+            <div class="chatbot-info">
+                <h3>T-Rex</h3>
+                <div class="chatbot-status">
+                    <span class="chatbot-status-dot"></span>Online
+                </div>
+            </div>
+        </div>
+        <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="chatbot-messages" id="chatbotMessages">
+        <!-- Messages will be inserted here -->
+    </div>
+
+    <!-- Typing Indicator -->
+    <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
+        <div class="chatbot-message-avatar">🦖</div>
+        <div class="chatbot-typing-dots">
+            <div class="chatbot-typing-dot"></div>
+            <div class="chatbot-typing-dot"></div>
+            <div class="chatbot-typing-dot"></div>
+        </div>
+    </div>
+
+    <!-- Quick Replies -->
+    <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+        <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
+        <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons">
+            <!-- Quick replies will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Input -->
+    <div class="chatbot-input">
+        <input 
+            type="text" 
+            id="chatbotMessageInput" 
+            placeholder="Ketik pertanyaan Anda..."
+            autocomplete="off"
+        />
+        <!-- TOMBOL CLEAR HISTORY - BARU DITAMBAHKAN -->
+        <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">
+            🗑️
+        </button>
+        <button class="chatbot-send-btn" id="chatbotSendBtn">
+            <svg viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script src="JS/Chatbot.js"></script>
+    <script src="JS/CV.js"></script>
+</body>
+</html>
