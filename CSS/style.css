@@ -479,7 +479,11 @@ section.active {
     transform: translateY(-3px);
 }
 
-/* Responsive */
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Desktop Sedang - 1200px */
 @media (max-width: 1200px) {
     #home {
         grid-template-columns: 1fr 1fr 0.8fr;
@@ -505,6 +509,7 @@ section.active {
     }
 }
 
+/* Tablet & Small Desktop - 1024px */
 @media (max-width: 1024px) {
     #home {
         grid-template-columns: 1fr;
@@ -521,12 +526,15 @@ section.active {
         justify-content: center;
     }
 
+    /* Layout 2 kolom untuk tablet */
     .works-grid,
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
     }
 }
 
+/* Tablet Medium - 768px */
 @media (max-width: 768px) {
     nav {
         padding: 15px 30px;
@@ -536,15 +544,38 @@ section.active {
         padding: 80px 30px 30px;
     }
 
+    /* TETAP 2 kolom untuk tablet medium */
     .works-grid,
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .intro-text h1 {
         font-size: 48px;
     }
     
+    .section-title {
+        font-size: 42px;
+    }
+
+    .work-image {
+        height: 220px;
+        font-size: 56px;
+    }
+
+    .work-content {
+        padding: 20px;
+    }
+
+    .work-content h3 {
+        font-size: 18px;
+    }
+
+    .service-card {
+        padding: 35px;
+    }
+
     .hero-image::before {
         width: 300px;
         height: 300px;
@@ -559,11 +590,169 @@ section.active {
         max-width: 260px;
     }
 }
-.social-icons {
-    display: flex;
-    gap: 15px;
+
+/* Mobile Landscape - 640px */
+@media (max-width: 640px) {
+    nav {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    /* TETAP 2 kolom untuk mobile landscape */
+    .works-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .work-content h3 {
+        font-size: 16px;
+    }
+
+    .work-content p {
+        font-size: 13px;
+    }
 }
 
+/* Mobile Portrait - 480px ke bawah */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .cta-button {
+        padding: 7px 14px;
+        font-size: 10px;
+    }
+
+    .container {
+        padding: 80px 20px 30px;
+    }
+
+    /* 1 KOLOM untuk HP kecil */
+    .works-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .intro-text h1 {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .work-image {
+        height: 200px;
+        font-size: 48px;
+    }
+
+    .work-content {
+        padding: 20px;
+    }
+
+    .work-content h3 {
+        font-size: 18px;
+    }
+
+    .work-content p {
+        font-size: 14px;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        max-width: 220px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Extra Small - 360px */
+@media (max-width: 360px) {
+    nav {
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .cta-button {
+        padding: 7px 14px;
+        font-size: 10px;
+        border-radius: 20px;
+    }
+
+    .intro-text h1 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .work-image {
+        height: 180px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+}
+
+/* Social Icons Styling */
 .social-icons a {
     width: 50px;
     height: 50px;
@@ -641,4 +830,3 @@ section.active {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
 }
-
