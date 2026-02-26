@@ -56,12 +56,14 @@ nav {
     font-size: 24px;
     font-weight: 700;
     color: #fff;
+    white-space: nowrap; /* Prevent logo from wrapping */
 }
 
 .nav-links {
     display: flex;
     gap: 40px;
     list-style: none;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .nav-links a {
@@ -71,6 +73,7 @@ nav {
     font-weight: 500;
     transition: color 0.3s;
     cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .nav-links a:hover,
@@ -88,6 +91,8 @@ nav {
     font-size: 14px;
     transition: all 0.3s;
     cursor: pointer;
+    white-space: nowrap; /* Prevent button text wrapping */
+    flex-shrink: 0; /* Prevent button from shrinking */
 }
 
 .cta-button:hover {
@@ -325,6 +330,7 @@ section.active {
     flex-direction: column;
     justify-content: center;
     padding: 50px 0;
+    align-items: center; /* Center section content */
 }
 
 .section-title {
@@ -340,6 +346,9 @@ section.active {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 100%;
+    max-width: 1400px; /* Prevent overly wide grid */
+    margin: 0 auto; /* Center grid */
+    justify-items: center; /* Center items in grid cells */
 }
 
 .work-item {
@@ -353,6 +362,8 @@ section.active {
     text-decoration: none;
     color: inherit;
     display: block;
+    width: 100%; /* Full width of grid cell */
+    max-width: 450px; /* Limit maximum width */
 }
 
 .work-item:hover {
@@ -392,6 +403,7 @@ section.active {
     flex-direction: column;
     justify-content: center;
     padding: 50px 0;
+    align-items: center; /* Center section content */
 }
 
 .services-grid {
@@ -399,6 +411,9 @@ section.active {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 100%;
+    max-width: 1400px; /* Prevent overly wide grid */
+    margin: 0 auto; /* Center grid */
+    justify-items: center; /* Center items in grid cells */
 }
 
 .service-card {
@@ -408,6 +423,8 @@ section.active {
     padding: 40px;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
+    width: 100%; /* Full width of grid cell */
+    max-width: 450px; /* Limit maximum width */
 }
 
 .service-card:hover {
@@ -594,45 +611,6 @@ section.active {
 /* Mobile Landscape - 640px */
 @media (max-width: 640px) {
     nav {
-        padding: 12px 20px;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .cta-button {
-        padding: 8px 16px;
-        font-size: 11px;
-    }
-
-    /* TETAP 2 kolom untuk mobile landscape */
-    .works-grid,
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .work-content h3 {
-        font-size: 16px;
-    }
-
-    .work-content p {
-        font-size: 13px;
-    }
-}
-
-/* Mobile Portrait - 480px ke bawah */
-@media (max-width: 480px) {
-    nav {
         padding: 10px 15px;
     }
 
@@ -641,7 +619,7 @@ section.active {
     }
 
     .nav-links {
-        gap: 12px;
+        gap: 8px;
     }
 
     .nav-links a {
@@ -649,19 +627,63 @@ section.active {
     }
 
     .cta-button {
-        padding: 7px 14px;
-        font-size: 10px;
+        padding: 6px 12px;
+        font-size: 9px;
+    }
+
+    /* Grid tetap 3 kolom untuk mobile landscape */
+    .works-grid,
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .work-content h3 {
+        font-size: 14px;
+    }
+
+    .work-content p {
+        font-size: 11px;
+    }
+    
+    .work-image {
+        height: 150px;
+        font-size: 40px;
+    }
+}
+
+/* Mobile Portrait - 480px ke bawah */
+@media (max-width: 480px) {
+    nav {
+        padding: 8px 12px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 6px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .cta-button {
+        padding: 5px 10px;
+        font-size: 8px;
     }
 
     .container {
-        padding: 80px 20px 30px;
+        padding: 70px 15px 30px;
     }
 
-    /* 1 KOLOM untuk HP kecil */
+    /* Grid 2 kolom untuk mobile portrait */
     .works-grid,
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .intro-text h1 {
@@ -669,37 +691,37 @@ section.active {
     }
 
     .section-title {
-        font-size: 36px;
-        margin-bottom: 30px;
+        font-size: 32px;
+        margin-bottom: 25px;
     }
 
     .work-image {
-        height: 200px;
-        font-size: 48px;
+        height: 180px;
+        font-size: 42px;
     }
 
     .work-content {
-        padding: 20px;
+        padding: 15px;
     }
 
     .work-content h3 {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .work-content p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .service-card {
-        padding: 30px;
+        padding: 25px;
     }
 
     .service-card h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .service-card p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .hero-image img {
@@ -707,32 +729,43 @@ section.active {
     }
 
     .about-content p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
 /* Mobile Extra Small - 360px */
 @media (max-width: 360px) {
     nav {
-        padding: 10px 12px;
+        padding: 6px 10px;
     }
 
     .logo {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .nav-links {
-        gap: 12px;
+        gap: 5px;
     }
 
     .nav-links a {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .cta-button {
-        padding: 7px 14px;
-        font-size: 10px;
-        border-radius: 20px;
+        padding: 4px 8px;
+        font-size: 7px;
+        border-radius: 15px;
+    }
+    
+    .container {
+        padding: 60px 12px 25px;
+    }
+
+    /* Grid 1 kolom untuk layar sangat kecil */
+    .works-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .intro-text h1 {
@@ -740,15 +773,16 @@ section.active {
     }
 
     .section-title {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .work-image {
-        height: 180px;
+        height: 160px;
+        font-size: 38px;
     }
 
     .service-card {
-        padding: 25px;
+        padding: 20px;
     }
 }
 
