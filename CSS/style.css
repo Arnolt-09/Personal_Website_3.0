@@ -166,10 +166,13 @@ section.active {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 30px;
+    min-height: 65px; /* Reserve space untuk typewriter */
 }
 
 .contact-info {
     margin-top: 80px;
+    position: relative; /* Make it positioned */
+    min-height: 80px; /* Reserve space */
 }
 
 .email {
@@ -181,6 +184,9 @@ section.active {
 .social-icons {
     display: flex;
     gap: 15px;
+    position: absolute; /* Fix position */
+    left: 0; /* Always stick to left */
+    bottom: 0; /* Always stick to bottom */
 }
 
 .social-icons a {
@@ -293,7 +299,8 @@ section.active {
 
 .card-image {
     width: 100%;
-    height: 150px;
+    height: auto; /* Auto height - biar aspect-ratio yang ngatur */
+    aspect-ratio: 1 / 1; /* Force square shape */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 15px;
     margin-bottom: 15px;
@@ -558,14 +565,40 @@ section.active {
         justify-self: center;
     }
     
+    .intro-text h1 {
+        font-size: 56px; /* Smaller untuk tablet */
+    }
+    
+    .intro-text p {
+        font-size: 15px; /* Slightly smaller */
+        padding: 0 10px; /* Prevent cutoff */
+    }
+    
     .hero-image {
         justify-self: center;
+    }
+    
+    .hero-image img {
+        max-width: 400px; /* Smaller on tablet */
     }
 
     .portfolio-cards {
         flex-direction: row;
         justify-content: center;
         justify-self: center;
+        gap: 12px;
+    }
+    
+    .portfolio-card {
+        max-width: 200px; /* Smaller for tablet */
+        padding: 18px;
+    }
+    
+    .card-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1; /* Square */
+        font-size: 40px;
     }
 
     /* Layout 2 kolom untuk tablet */
@@ -657,7 +690,74 @@ section.active {
     }
     
     #home {
-        padding: 0 15px;
+        padding: 0 20px; /* More padding */
+    }
+    
+    .intro-text h1 {
+        font-size: 42px; /* Smaller */
+    }
+    
+    .intro-text h2 {
+        font-size: 16px;
+    }
+    
+    .intro-text p {
+        font-size: 14px;
+        padding: 0 15px; /* Extra padding untuk prevent cutoff */
+        max-width: 100%; /* Prevent overflow */
+        min-height: 75px; /* More space on mobile */
+    }
+    
+    .contact-info {
+        margin-top: 70px; /* More space untuk prevent collision */
+    }
+    
+    .hero-image img {
+        max-width: 280px; /* Smaller image */
+    }
+    
+    .social-icons {
+        gap: 12px;
+        justify-content: flex-start; /* Align to left always */
+        position: absolute; /* Keep fixed */
+        left: 50%; /* Center in mobile */
+        transform: translateX(-50%); /* Perfect center */
+        bottom: 0;
+    }
+    
+    .social-icons a {
+        width: 45px; /* Slightly smaller */
+        height: 45px;
+    }
+    
+    .portfolio-cards {
+        gap: 4px; /* Tighter */
+        padding: 0 8px; /* Lebih banyak padding edge */
+        justify-content: center;
+    }
+    
+    .portfolio-card {
+        max-width: 85px; /* Lebih kecil lagi! */
+        padding: 5px; /* Minimal padding */
+        border-radius: 10px;
+    }
+    
+    .card-image {
+        width: 75px; /* Smaller */
+        height: 75px;
+        font-size: 22px;
+        border-radius: 8px;
+        margin-bottom: 3px;
+    }
+    
+    .portfolio-card h3 {
+        font-size: 7.5px;
+        margin-bottom: 1px;
+    }
+    
+    .portfolio-card p {
+        font-size: 6px;
+        line-height: 1.2;
     }
     
     .container {
@@ -724,7 +824,70 @@ section.active {
     }
 
     .container {
-        padding: 70px 12px 30px;
+        padding: 70px 15px 30px; /* More side padding */
+    }
+    
+    #home {
+        padding: 0 20px;
+    }
+
+    .intro-text h1 {
+        font-size: 34px; /* Smaller to fit */
+    }
+    
+    .intro-text h2 {
+        font-size: 15px;
+    }
+    
+    .intro-text p {
+        font-size: 13px;
+        padding: 0 10px;
+        line-height: 1.6;
+        min-height: 70px; /* More space */
+    }
+    
+    .contact-info {
+        margin-top: 65px; /* More space */
+    }
+    
+    .hero-image img {
+        max-width: 240px; /* Smaller */
+    }
+    
+    .social-icons a {
+        width: 42px; /* Smaller icons */
+        height: 42px;
+    }
+    
+    .portfolio-cards {
+        flex-direction: row;
+        gap: 3px; /* Tighter */
+        padding: 0 8px; /* Lebih banyak padding edge */
+        justify-content: center;
+    }
+    
+    .portfolio-card {
+        max-width: 80px; /* Lebih kecil lagi! */
+        padding: 4px; /* Minimal padding */
+        border-radius: 9px;
+    }
+    
+    .card-image {
+        width: 72px; /* Smaller */
+        height: 72px;
+        font-size: 20px;
+        border-radius: 7px;
+        margin-bottom: 2px;
+    }
+    
+    .portfolio-card h3 {
+        font-size: 7px;
+        margin-bottom: 1px;
+    }
+    
+    .portfolio-card p {
+        font-size: 5.5px;
+        line-height: 1.2;
     }
 
     /* Grid 2 kolom untuk mobile portrait */
@@ -732,11 +895,7 @@ section.active {
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
-        padding: 0 10px;
-    }
-
-    .intro-text h1 {
-        font-size: 36px;
+        padding: 0 15px; /* More padding */
     }
 
     .section-title {
@@ -773,12 +932,12 @@ section.active {
         font-size: 12px;
     }
 
-    .hero-image img {
-        max-width: 220px;
+    .about-content {
+        padding: 0 15px;
     }
 
     .about-content p {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
