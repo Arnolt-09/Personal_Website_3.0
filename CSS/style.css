@@ -150,7 +150,7 @@ section.active {
 .intro-text h2 {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .intro-text h1 {
@@ -165,12 +165,12 @@ section.active {
     color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
     line-height: 1.8;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     min-height: 65px; /* Reserve space untuk typewriter */
 }
 
 .contact-info {
-    margin-top: 20px;
+    margin-top: 80px;
     position: relative; /* Make it positioned */
     min-height: 80px; /* Reserve space */
 }
@@ -183,8 +183,10 @@ section.active {
 
 .social-icons {
     display: flex;
-    gap: 10px;
-    position: relative;
+    gap: 15px;
+    position: absolute; /* Fix position */
+    left: 0; /* Always stick to left */
+    bottom: 0; /* Always stick to bottom */
 }
 
 .social-icons a {
@@ -305,7 +307,7 @@ section.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 32px; /* MEDIUM - was 38px */
     animation: cardImagePulse 2s ease-in-out infinite;
 }
 
@@ -522,6 +524,26 @@ section.active {
    RESPONSIVE BREAKPOINTS
    ======================================== */
 
+/* Desktop Besar - 1025px ke atas (KHUSUS DESKTOP) */
+@media (min-width: 1025px) {
+    .portfolio-card {
+        max-width: 200px; /* Lebih kecil untuk desktop - was 280px */
+        padding: 18px; /* Lebih compact */
+    }
+    
+    .card-image {
+        font-size: 28px; /* Icon lebih kecil juga */
+    }
+    
+    .portfolio-card h3 {
+        font-size: 13px; /* Slightly smaller */
+    }
+    
+    .portfolio-card p {
+        font-size: 11px; /* Slightly smaller */
+    }
+}
+
 /* Desktop Sedang - 1200px */
 @media (max-width: 1200px) {
     #home {
@@ -704,10 +726,11 @@ section.active {
         padding: 0 15px; /* Extra padding untuk prevent cutoff */
         max-width: 100%; /* Prevent overflow */
         min-height: 75px; /* More space on mobile */
+        margin-bottom: 20px; /* Kurangi margin bawah */
     }
     
     .contact-info {
-        margin-top: 70px; /* More space untuk prevent collision */
+        margin-top: 40px; /* LEBIH DEKAT - was 70px */
     }
     
     .hero-image img {
@@ -842,10 +865,11 @@ section.active {
         padding: 0 10px;
         line-height: 1.6;
         min-height: 70px; /* More space */
+        margin-bottom: 15px; /* Kurangi margin bawah */
     }
     
     .contact-info {
-        margin-top: 65px; /* More space */
+        margin-top: 35px; /* LEBIH DEKAT - was 65px */
     }
     
     .hero-image img {
