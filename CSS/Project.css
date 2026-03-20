@@ -166,10 +166,11 @@ body {
     border: none;
     border-radius: 25px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
     transform: translateY(10px);
+    text-decoration: none; /* ← tambah ini */
 }
 
 .project-card:hover .view-btn {
