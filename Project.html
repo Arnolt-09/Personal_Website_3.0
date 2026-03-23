@@ -17,7 +17,16 @@
 
     <div class="projects-container">
         <div class="projects-header">
-            <h1>My Projects <span class="emoji">🌐</span></h1>
+            <h1>My Projects
+                <span class="header-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                </span>
+            </h1>
             <p class="subtitle">A showcase of my development and creative projects</p>
         </div>
 
@@ -29,7 +38,6 @@
                         <source src="Video/COMING SOON.mp4" type="video/mp4">
                     </video>
                     <div class="card-overlay">
-                        <!-- LINK SLOT 1: Ganti "#" dengan link project kamu -->
                         <a href="#" target="_blank" class="view-btn">View Project</a>
                     </div>
                 </div>
@@ -38,10 +46,7 @@
                         <h3>COMING SOON</h3>
                         <span class="date-badge">Launching Soon</span>
                     </div>
-                    <p>
-                        Turning ideas into visuals, and visuals into experiences. 
-                        New creative projects are on the way
-                    </p>
+                    <p>Turning ideas into visuals, and visuals into experiences. New creative projects are on the way</p>
                     <div class="card-tags">
                         <span class="tag">SOON</span>
                         <span class="tag">🚀🚀🚀</span>
@@ -54,7 +59,6 @@
                 <div class="card-image">
                     <img src="PICT/HOROR GAME 3D.jpeg" alt="Horror Game 3D">
                     <div class="card-overlay">
-                        <!-- LINK SLOT 2: Ganti "#" dengan link project kamu -->
                         <a href="#" target="_blank" class="view-btn">View Project</a>
                     </div>
                 </div>
@@ -76,7 +80,6 @@
                 <div class="card-image">
                     <img src="PICT/GAME 2D.png" alt="2D GAME">
                     <div class="card-overlay">
-                        <!-- LINK SLOT 3: Ganti "#" dengan link project kamu -->
                         <a href="#" target="_blank" class="view-btn">View Project</a>
                     </div>
                 </div>
@@ -98,7 +101,6 @@
                 <div class="card-image">
                     <img src="PICT/web defion.png" alt="Defion">
                     <div class="card-overlay">
-                        <!-- LINK SLOT 4: Ganti "#" dengan link project kamu -->
                         <a href="https://arnolt-09.github.io/Defion_1/" target="_blank" class="view-btn">View Project</a>
                     </div>
                 </div>
@@ -120,7 +122,6 @@
                 <div class="card-image">
                     <img src="PICT/Personal Website 2.0.jpeg" alt="Personal Web 2.0">
                     <div class="card-overlay">
-                        <!-- LINK SLOT 5: Ganti "#" dengan link project kamu -->
                         <a href="https://sanssskuy-phi.vercel.app/" target="_blank" class="view-btn">View Project</a>
                     </div>
                 </div>
@@ -142,7 +143,6 @@
                 <div class="card-image">
                     <img src="PICT/Personal Website 1.0.jpeg" alt="Personal Web 1.0">
                     <div class="card-overlay">
-                        <!-- LINK SLOT 6: Ganti "#" dengan link project kamu -->
                         <a href="https://sanssskuy.vercel.app/" target="_blank" class="view-btn">View Project</a>
                     </div>
                 </div>
@@ -176,9 +176,7 @@
                 <div class="chatbot-avatar">🦖</div>
                 <div class="chatbot-info">
                     <h3>T-Rex</h3>
-                    <div class="chatbot-status">
-                        <span class="chatbot-status-dot"></span>Online
-                    </div>
+                    <div class="chatbot-status"><span class="chatbot-status-dot"></span>Online</div>
                 </div>
             </div>
             <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
@@ -197,19 +195,10 @@
             <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons"></div>
         </div>
         <div class="chatbot-input">
-            <input 
-                type="text" 
-                id="chatbotMessageInput" 
-                placeholder="Ketik pertanyaan Anda..."
-                autocomplete="off"
-            />
-            <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">
-                🗑️
-            </button>
+            <input type="text" id="chatbotMessageInput" placeholder="Ketik pertanyaan Anda..." autocomplete="off"/>
+            <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">🗑️</button>
             <button class="chatbot-send-btn" id="chatbotSendBtn">
-                <svg viewBox="0 0 24 24">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
             </button>
         </div>
     </div>

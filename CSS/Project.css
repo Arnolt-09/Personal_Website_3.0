@@ -61,11 +61,29 @@ body {
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.projects-header .emoji {
-    font-size: 56px;
-    margin-left: 10px;
+/* Header icon — glass pill, warna hijau sesuai gambar */
+.header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.4);
+    color: #34d399;
+    flex-shrink: 0;
+}
+
+.header-icon svg {
+    width: 28px;
+    height: 28px;
 }
 
 .subtitle {
@@ -95,18 +113,6 @@ body {
     animation: cardFadeIn 0.6s ease forwards;
 }
 
-.card-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.card-image video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* biar full & ga gepeng */
-    display: block;
-}
-
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
@@ -127,6 +133,13 @@ body {
     height: 280px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.03);
+}
+
+.card-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .card-image img {
@@ -170,7 +183,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     transform: translateY(10px);
-    text-decoration: none; /* ← tambah ini */
+    text-decoration: none;
 }
 
 .project-card:hover .view-btn {
@@ -242,74 +255,32 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes cardFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 25px;
-    }
+    .projects-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
 }
 
 @media (max-width: 768px) {
-    .projects-header h1 {
-        font-size: 40px;
-    }
-
-    .projects-header .emoji {
-        font-size: 40px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .back-button {
-        top: 20px;
-        left: 20px;
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .projects-container {
-        margin-top: 60px;
-    }
-
-    .card-image {
-        height: 220px;
-    }
+    .projects-header h1 { font-size: 40px; }
+    .header-icon         { width: 44px; height: 44px; }
+    .header-icon svg     { width: 22px; height: 22px; }
+    .subtitle            { font-size: 16px; }
+    .projects-grid       { grid-template-columns: 1fr; gap: 20px; }
+    .back-button         { top: 20px; left: 20px; padding: 10px 20px; font-size: 13px; }
+    .projects-container  { margin-top: 60px; }
+    .card-image          { height: 220px; }
 }

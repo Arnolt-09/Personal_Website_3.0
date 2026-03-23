@@ -17,7 +17,17 @@
 
     <div class="designs-container">
         <div class="designs-header">
-            <h1>My Figma Designs <span class="emoji">🎨</span></h1>
+            <h1>My Figma Designs
+                <span class="header-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
+                        <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
+                        <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
+                        <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
+                        <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+                    </svg>
+                </span>
+            </h1>
             <p class="subtitle">A collection of my design projects and explorations</p>
         </div>
 
@@ -96,7 +106,7 @@
                 <div class="card-content">
                     <div class="card-header">
                         <h3>Suki Floris</h3>
-                        <span class="date-badge">2025   </span>
+                        <span class="date-badge">2025</span>
                     </div>
                     <p>Suki Floris is an application that provides gardening equipment to make it easier for users to purchase equipment practically and efficiently.</p>
                     <div class="card-tags">
@@ -137,7 +147,7 @@
                 </div>
                 <div class="card-content">
                     <div class="card-header">
-                        <h3>Personal Website 1.0 </h3>
+                        <h3>Personal Website 1.0</h3>
                         <span class="date-badge">2024</span>
                     </div>
                     <p>Personal Website 1.0 is a personal website that displays a profile, career path, and provides direct contact access via email.</p>
@@ -147,77 +157,52 @@
                     </div>
                 </div>
             </div>
-<script src="JS/My Education.js"></script>
-    <link rel="stylesheet" href="CSS/Chatbot.css">
-     <!-- Chat Toggle Button -->
-<button class="chatbot-toggle" id="chatbotToggle">
-    <svg viewBox="0 0 24 24">
-        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-    </svg>
-</button>
+        </div>
+    </div>
 
-<!-- Chat Container -->
-<div class="chatbot-container" id="chatbotContainer">
-    <!-- Header -->
-    <div class="chatbot-header">
-        <div class="chatbot-header-info">
-            <div class="chatbot-avatar">🦖</div>
-            <div class="chatbot-info">
-                <h3>T-Rex</h3>
-                <div class="chatbot-status">
-                    <span class="chatbot-status-dot"></span>Online
+    <script src="JS/My Education.js"></script>
+    <link rel="stylesheet" href="CSS/Chatbot.css">
+
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+        </svg>
+    </button>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <div class="chatbot-avatar">🦖</div>
+                <div class="chatbot-info">
+                    <h3>T-Rex</h3>
+                    <div class="chatbot-status"><span class="chatbot-status-dot"></span>Online</div>
                 </div>
             </div>
+            <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
         </div>
-        <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
-    </div>
-
-    <!-- Messages -->
-    <div class="chatbot-messages" id="chatbotMessages">
-        <!-- Messages will be inserted here -->
-    </div>
-
-    <!-- Typing Indicator -->
-    <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
-        <div class="chatbot-message-avatar">🦖</div>
-        <div class="chatbot-typing-dots">
-            <div class="chatbot-typing-dot"></div>
-            <div class="chatbot-typing-dot"></div>
-            <div class="chatbot-typing-dot"></div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
+            <div class="chatbot-message-avatar">🦖</div>
+            <div class="chatbot-typing-dots">
+                <div class="chatbot-typing-dot"></div>
+                <div class="chatbot-typing-dot"></div>
+                <div class="chatbot-typing-dot"></div>
+            </div>
         </div>
-    </div>
-
-    <!-- Quick Replies -->
-    <div class="chatbot-quick-replies" id="chatbotQuickReplies">
-        <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
-        <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons">
-            <!-- Quick replies will be inserted here -->
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+            <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
+            <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons"></div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotMessageInput" placeholder="Ketik pertanyaan Anda..." autocomplete="off"/>
+            <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">🗑️</button>
+            <button class="chatbot-send-btn" id="chatbotSendBtn">
+                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
         </div>
     </div>
 
-    <!-- Input -->
-    <div class="chatbot-input">
-        <input 
-            type="text" 
-            id="chatbotMessageInput" 
-            placeholder="Ketik pertanyaan Anda..."
-            autocomplete="off"
-        />
-        <!-- TOMBOL CLEAR HISTORY - BARU DITAMBAHKAN -->
-        <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">
-            🗑️
-        </button>
-        <button class="chatbot-send-btn" id="chatbotSendBtn">
-            <svg viewBox="0 0 24 24">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-            </svg>
-        </button>
-    </div>
-</div>
-
-<script src="JS/Chatbot.js"></script>
-      
-
+    <script src="JS/Chatbot.js"></script>
     <script src="JS/Figma.js"></script>
 </body>
 </html>

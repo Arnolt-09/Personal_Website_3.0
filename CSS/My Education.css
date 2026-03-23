@@ -42,6 +42,7 @@ body {
     height: 20px;
 }
 
+/* Container */
 .education-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -52,6 +53,7 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
+/* Header */
 .education-header {
     text-align: center;
     margin-bottom: 50px;
@@ -61,14 +63,32 @@ body {
     font-size: 48px;
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
 }
 
-.education-header .emoji {
-    font-size: 48px;
-    margin-left: 10px;
+/* Header icon — sama persis warna & style dengan school-icon */
+.header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(106, 168, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.4);
+    color: #6aa8ff;
+    flex-shrink: 0;
 }
 
+.header-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Description */
 .education-description {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -85,6 +105,7 @@ body {
     text-align: justify;
 }
 
+/* Schools grid */
 .schools-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -105,16 +126,25 @@ body {
     display: block;
 }
 
-.school-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.2);
+
+/* School icon — glass pill, warna biru sama dengan gambar */
+.school-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: rgba(106, 168, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.4);
+    color: #6aa8ff; /* biru sama untuk semua card */
 }
 
-.school-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-    display: block;
+.school-icon svg {
+    width: 28px;
+    height: 28px;
 }
 
 .school-card h3 {
@@ -142,52 +172,40 @@ body {
     margin-top: 10px;
 }
 
+/* Location badge */
 .location-badge {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     color: #00a8ff;
     font-size: 14px;
     margin-top: 10px;
     font-weight: 500;
 }
 
-.school-card-1 {
-    background: rgba(102, 126, 234, 0.1);
-    border-color: rgba(102, 126, 234, 0.3);
+.location-badge svg { flex-shrink: 0; color: #00a8ff; }
+
+/* Card accent — sama-sama biru supaya konsisten */
+.school-card-1,
+.school-card-2 {
+    background: rgba(106, 168, 255, 0.06);
+    border-color: rgba(106, 168, 255, 0.2);
 }
 
-.school-card-2 {
-    background: rgba(118, 75, 162, 0.1);
-    border-color: rgba(118, 75, 162, 0.3);
-}
 
 /* Responsive */
+/* School card hover */
+.school-card:hover {
+    border-color: rgba(106, 168, 255, 0.4);
+}
+
 @media (max-width: 768px) {
-    .education-container {
-        padding: 40px 30px;
-    }
-
-    .education-header h1 {
-        font-size: 36px;
-    }
-
-    .schools-container {
-        grid-template-columns: 1fr;
-    }
-
-    .education-description {
-        padding: 30px;
-    }
-
-    .education-description p {
-        font-size: 16px;
-    }
-
-    .back-button {
-        top: 20px;
-        left: 20px;
-        padding: 10px 20px;
-        font-size: 13px;
-    }
+    .education-container { padding: 40px 30px; }
+    .education-header h1 { font-size: 36px; }
+    .header-icon { width: 44px; height: 44px; }
+    .header-icon svg { width: 22px; height: 22px; }
+    .schools-container { grid-template-columns: 1fr; }
+    .education-description { padding: 30px; }
+    .education-description p { font-size: 16px; }
+    .back-button { top: 20px; left: 20px; padding: 10px 20px; font-size: 13px; }
 }

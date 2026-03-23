@@ -61,11 +61,29 @@ body {
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.cv-header .emoji {
-    font-size: 56px;
-    margin-left: 10px;
+/* Header icon — glass pill, warna ungu */
+.header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(192, 132, 252, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.4);
+    color: #c084fc;
+    flex-shrink: 0;
+}
+
+.header-icon svg {
+    width: 28px;
+    height: 28px;
 }
 
 .subtitle {
@@ -158,6 +176,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     transform: translateY(10px);
+    text-decoration: none;
 }
 
 .cv-card:hover .view-btn {
@@ -229,74 +248,32 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes cardFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .cv-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 25px;
-    }
+    .cv-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
 }
 
 @media (max-width: 768px) {
-    .cv-header h1 {
-        font-size: 40px;
-    }
-
-    .cv-header .emoji {
-        font-size: 40px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .cv-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .back-button {
-        top: 20px;
-        left: 20px;
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .cv-container {
-        margin-top: 60px;
-    }
-
-    .card-image {
-        height: 220px;
-    }
+    .cv-header h1 { font-size: 40px; }
+    .header-icon  { width: 44px; height: 44px; }
+    .header-icon svg { width: 22px; height: 22px; }
+    .subtitle     { font-size: 16px; }
+    .cv-grid      { grid-template-columns: 1fr; gap: 20px; }
+    .back-button  { top: 20px; left: 20px; padding: 10px 20px; font-size: 13px; }
+    .cv-container { margin-top: 60px; }
+    .card-image   { height: 220px; }
 }

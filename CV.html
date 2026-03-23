@@ -14,105 +14,99 @@
         </svg>
         Back to Home
     </a>
-    
+
     <div class="container">
         <div class="header">
-            <h1>📄 Curriculum Vitae</h1>
+            <div class="h1-wrapper">
+                <h1>Curriculum Vitae</h1>
+                <span class="header-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                </span>
+            </div>
             <p>Lihat CV saya langsung di browser</p>
         </div>
-        
+
         <div class="controls">
             <a href="CV/CV Inggris.pdf" download class="btn btn-primary">
-                ⬇️ Download CV
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
             </a>
             <a href="CV/CV Inggris.pdf" target="_blank" class="btn btn-secondary">
-                🔗 Buka di Tab Baru
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Buka di Tab Baru
             </a>
         </div>
-        
-        <!-- Cara 1: Menggunakan iframe (paling umum) -->
-        <iframe 
-            src="CV/CV Inggris.pdf" 
+
+        <iframe
+            src="CV/CV Inggris.pdf"
             class="pdf-viewer"
             title="CV PDF Viewer">
         </iframe>
-        
-        <!-- Fallback jika browser tidak support -->
+
         <div class="fallback">
             <h2>Browser tidak mendukung tampilan PDF</h2>
             <p>Silakan download CV untuk melihatnya</p>
             <a href="CV/CV Inggris.pdf" download class="btn btn-primary">Download CV</a>
         </div>
     </div>
+
     <script src="JS/My Education.js"></script>
     <link rel="stylesheet" href="CSS/Chatbot.css">
-    !-- Chat Toggle Button -->
-<button class="chatbot-toggle" id="chatbotToggle">
-    <svg viewBox="0 0 24 24">
-        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-    </svg>
-</button>
 
-<!-- Chat Container -->
-<div class="chatbot-container" id="chatbotContainer">
-    <!-- Header -->
-    <div class="chatbot-header">
-        <div class="chatbot-header-info">
-            <div class="chatbot-avatar">🦖</div>
-            <div class="chatbot-info">
-                <h3>T-Rex</h3>
-                <div class="chatbot-status">
-                    <span class="chatbot-status-dot"></span>Online
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+        </svg>
+    </button>
+
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <div class="chatbot-avatar">🦖</div>
+                <div class="chatbot-info">
+                    <h3>T-Rex</h3>
+                    <div class="chatbot-status"><span class="chatbot-status-dot"></span>Online</div>
                 </div>
             </div>
+            <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
         </div>
-        <button class="chatbot-close-btn" id="chatbotCloseChat">&times;</button>
-    </div>
-
-    <!-- Messages -->
-    <div class="chatbot-messages" id="chatbotMessages">
-        <!-- Messages will be inserted here -->
-    </div>
-
-    <!-- Typing Indicator -->
-    <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
-        <div class="chatbot-message-avatar">🦖</div>
-        <div class="chatbot-typing-dots">
-            <div class="chatbot-typing-dot"></div>
-            <div class="chatbot-typing-dot"></div>
-            <div class="chatbot-typing-dot"></div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-typing-indicator" id="chatbotTypingIndicator">
+            <div class="chatbot-message-avatar">🦖</div>
+            <div class="chatbot-typing-dots">
+                <div class="chatbot-typing-dot"></div>
+                <div class="chatbot-typing-dot"></div>
+                <div class="chatbot-typing-dot"></div>
+            </div>
         </div>
-    </div>
-
-    <!-- Quick Replies -->
-    <div class="chatbot-quick-replies" id="chatbotQuickReplies">
-        <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
-        <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons">
-            <!-- Quick replies will be inserted here -->
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+            <div class="chatbot-quick-reply-label">Pertanyaan populer:</div>
+            <div class="chatbot-quick-reply-buttons" id="chatbotQuickReplyButtons"></div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotMessageInput" placeholder="Ketik pertanyaan Anda..." autocomplete="off"/>
+            <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">🗑️</button>
+            <button class="chatbot-send-btn" id="chatbotSendBtn">
+                <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
         </div>
     </div>
 
-    <!-- Input -->
-    <div class="chatbot-input">
-        <input 
-            type="text" 
-            id="chatbotMessageInput" 
-            placeholder="Ketik pertanyaan Anda..."
-            autocomplete="off"
-        />
-        <!-- TOMBOL CLEAR HISTORY - BARU DITAMBAHKAN -->
-        <button class="chatbot-clear-btn" id="chatbotClearBtn" title="Hapus riwayat chat / Clear chat history">
-            🗑️
-        </button>
-        <button class="chatbot-send-btn" id="chatbotSendBtn">
-            <svg viewBox="0 0 24 24">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-            </svg>
-        </button>
-    </div>
-</div>
-
-<script src="JS/Chatbot.js"></script>
+    <script src="JS/Chatbot.js"></script>
     <script src="JS/CV.js"></script>
 </body>
 </html>

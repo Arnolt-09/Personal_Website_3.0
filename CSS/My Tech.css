@@ -46,11 +46,9 @@ body {
     transform: translateX(-5px);
 }
 
-.back-button svg {
-    width: 20px;
-    height: 20px;
-}
+.back-button svg { width: 20px; height: 20px; }
 
+/* Header */
 .header {
     margin-bottom: 60px;
     text-align: center;
@@ -61,7 +59,28 @@ h1 {
     font-weight: 700;
     margin-bottom: 15px;
     color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
 }
+
+/* Header icon — glass pill, warna cyan sesuai gambar */
+.header-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.4);
+    color: #38bdf8;
+    flex-shrink: 0;
+}
+
+.header-icon svg { width: 28px; height: 28px; }
 
 .subtitle {
     font-size: 1.2rem;
@@ -69,6 +88,7 @@ h1 {
     font-weight: 400;
 }
 
+/* Tech Grid */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -82,13 +102,20 @@ h1 {
     transition: all 0.3s ease;
     cursor: pointer;
     border: 1px solid #2a2a2a;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
 }
+
+.tech-card:nth-child(1) { animation-delay: 0.1s; }
+.tech-card:nth-child(2) { animation-delay: 0.2s; }
+.tech-card:nth-child(3) { animation-delay: 0.3s; }
 
 .tech-card:hover {
     transform: translateY(-5px);
     border-color: #3a3a3a;
 }
 
+/* Tech Image */
 .tech-image {
     width: 100%;
     height: 280px;
@@ -106,13 +133,10 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-.tech-card:hover .tech-logo {
-    transform: scale(1.1);
-}
+.tech-card:hover .tech-logo { transform: scale(1.1); }
 
-.tech-content {
-    padding: 25px;
-}
+/* Tech Content */
+.tech-content { padding: 25px; }
 
 .tech-header {
     display: flex;
@@ -121,16 +145,8 @@ h1 {
     margin-bottom: 15px;
 }
 
-.tech-name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
-}
-
-.tech-date {
-    font-size: 0.85rem;
-    color: #666;
-}
+.tech-name  { font-size: 1.5rem; font-weight: 600; color: #fff; }
+.tech-date  { font-size: 0.85rem; color: #666; }
 
 .tech-description {
     font-size: 1rem;
@@ -139,11 +155,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.tech-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+.tech-tags  { display: flex; gap: 10px; flex-wrap: wrap; }
 
 .tech-tag {
     padding: 8px 16px;
@@ -154,83 +166,25 @@ h1 {
     border: 1px solid #3a3a3a;
 }
 
-/* Specific backgrounds for each tech */
-.js-bg {
-    background: #f7df1e;
-}
-
-.js-bg .tech-icon {
-    color: #000;
-    font-weight: 700;
-}
-
-.laravel-bg {
-    background: #090202;
-}
-
-.mysql-bg {
-    background: #000000;
-}
+/* Card backgrounds */
+.js-bg      { background: #f7df1e; }
+.laravel-bg { background: #090202; }
+.mysql-bg   { background: #000000; }
 
 /* Animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.tech-card {
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
-}
-
-.tech-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.tech-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.tech-card:nth-child(3) {
-    animation-delay: 0.3s;
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    body {
-        padding: 40px 20px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tech-image {
-        height: 240px;
-    }
-
-    .tech-icon {
-        font-size: 5rem;
-    }
-
-    .back-button {
-        top: 20px;
-        left: 20px;
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .container {
-        margin-top: 60px;
-    }
+    body        { padding: 40px 20px; }
+    h1          { font-size: 2.5rem; }
+    .header-icon { width: 44px; height: 44px; }
+    .header-icon svg { width: 22px; height: 22px; }
+    .tech-grid  { grid-template-columns: 1fr; }
+    .tech-image { height: 240px; }
+    .back-button { top: 20px; left: 20px; padding: 10px 20px; font-size: 13px; }
+    .container  { margin-top: 60px; }
 }
