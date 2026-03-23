@@ -1,163 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figma Designs</title>
-    <link rel="stylesheet" href="CSS/Figma.css">
+    <title>CV Saya</title>
+    <link rel="stylesheet" href="CSS/CV.css">
     <link rel="icon" href="data:,">
 </head>
 <body>
-    <!-- Back Button -->
-    <a href="index.html#works" class="back-button">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
         </svg>
         Back to Home
     </a>
 
-    <div class="designs-container">
-        <div class="designs-header">
-            <h1>My Figma Designs
+    <div class="container">
+        <div class="header">
+            <div class="h1-wrapper">
+                <h1>Curriculum Vitae</h1>
                 <span class="header-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
-                        <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
-                        <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
-                        <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
-                        <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
                     </svg>
                 </span>
-            </h1>
-            <p class="subtitle">A collection of my design projects and explorations</p>
+            </div>
+            <p>Lihat CV saya langsung di browser</p>
         </div>
 
-        <div class="designs-grid">
-            <!-- Design Card 1 -->
-            <div class="design-card">
-                <div class="card-image">
-                    <img src="PICT/Grabtrash.jpeg" alt="GrabTrash">
-                    <div class="card-overlay">
-                        <button class="view-btn">View Design</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>GrabTrash</h3>
-                        <span class="date-badge">2025</span>
-                    </div>
-                    <p>GrabTrash is an educational app that encourages people to dispose of waste properly through a points system that can be exchanged for discount coupons.</p>
-                    <div class="card-tags">
-                        <span class="tag">Mobile App</span>
-                        <span class="tag">UI/UX</span>
-                    </div>
-                </div>
-            </div>
+        <div class="controls">
+            <a href="CV/CV Inggris.pdf" download class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
+            </a>
+            <a href="CV/CV Inggris.pdf" target="_blank" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Buka di Tab Baru
+            </a>
+        </div>
 
-            <!-- Design Card 2 -->
-            <div class="design-card">
-                <div class="card-image">
-                    <img src="PICT/Web Pendaftaran Kerja.jpeg" alt="Lokerku">
-                    <div class="card-overlay">
-                        <button class="view-btn">View Design</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>Lokerku</h3>
-                        <span class="date-badge">2025</span>
-                    </div>
-                    <p>LokerKu is a website designed to make it easier for users to search for and apply for job vacancies quickly and practically.</p>
-                    <div class="card-tags">
-                        <span class="tag">Website</span>
-                        <span class="tag">Prototype</span>
-                    </div>
-                </div>
-            </div>
+        <iframe
+            src="CV/CV Inggris.pdf"
+            class="pdf-viewer"
+            title="CV PDF Viewer">
+        </iframe>
 
-            <!-- Design Card 3 -->
-            <div class="design-card">
-                <div class="card-image">
-                    <img src="PICT/Danishood.jpeg" alt="Danishood">
-                    <div class="card-overlay">
-                        <button class="view-btn">View Design</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>Danishood</h3>
-                        <span class="date-badge">2025</span>
-                    </div>
-                    <p>Danishood is a news website that provides the latest and most reliable information to keep users up to date with the latest developments.</p>
-                    <div class="card-tags">
-                        <span class="tag">News</span>
-                        <span class="tag">Web Design</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Design Card 4 -->
-            <div class="design-card">
-                <div class="card-image">
-                    <img src="PICT/Suki Floris.jpeg" alt="Suki Floris">
-                    <div class="card-overlay">
-                        <button class="view-btn">View Design</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>Suki Floris</h3>
-                        <span class="date-badge">2025</span>
-                    </div>
-                    <p>Suki Floris is an application that provides gardening equipment to make it easier for users to purchase equipment practically and efficiently.</p>
-                    <div class="card-tags">
-                        <span class="tag">E-Commerce</span>
-                        <span class="tag">Mobile App</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Design Card 5 -->
-            <div class="design-card">
-                <div class="card-image">
-                    <img src="PICT/Personal web2.0.jpeg" alt="Personal Website 2.0">
-                    <div class="card-overlay">
-                        <button class="view-btn">View Design</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>Personal Website 2.0</h3>
-                        <span class="date-badge">2024</span>
-                    </div>
-                    <p>Personal Website 2.0 is a development of Personal Website 1.0 with a more modern appearance and features to optimally present your profile and career journey.</p>
-                    <div class="card-tags">
-                        <span class="tag">Personal</span>
-                        <span class="tag">Website</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Design Card 6 -->
-            <div class="design-card">
-                <div class="card-image">
-                    <img src="PICT/Website Lama.jpeg" alt="Personal Website 1.0">
-                    <div class="card-overlay">
-                        <button class="view-btn">View Design</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-header">
-                        <h3>Personal Website 1.0</h3>
-                        <span class="date-badge">2024</span>
-                    </div>
-                    <p>Personal Website 1.0 is a personal website that displays a profile, career path, and provides direct contact access via email.</p>
-                    <div class="card-tags">
-                        <span class="tag">Personal</span>
-                        <span class="tag">Website</span>
-                    </div>
-                </div>
-            </div>
+        <div class="fallback">
+            <h2>Browser tidak mendukung tampilan PDF</h2>
+            <p>Silakan download CV untuk melihatnya</p>
+            <a href="CV/CV Inggris.pdf" download class="btn btn-primary">Download CV</a>
         </div>
     </div>
 
@@ -203,6 +107,6 @@
     </div>
 
     <script src="JS/Chatbot.js"></script>
-    <script src="JS/Figma.js"></script>
+    <script src="JS/CV.js"></script>
 </body>
 </html>
