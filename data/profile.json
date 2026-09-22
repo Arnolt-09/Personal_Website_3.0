@@ -1,0 +1,44 @@
+{
+  "name": "Arnolt Arfa Nugraha",
+  "wordmark": "Arnolt",
+  "role": "Software and Game Development Student",
+  "hero_left": "Ideas into",
+  "hero_right": "Products",
+  "hero_intro": "A Software and Game Development (PPLG) student at SMK Telkom Purwokerto who designs, builds, and ships websites, apps, and games.",
+  "hero_side": "From the first sketch in Figma to a live site on a real domain, every project is shaped to be clear, useful, and ready for people to use.",
+  "tape_words": ["Software Engineer", "Turning ideas into products", "UI/UX Designer", "Web Developer", "Digital Business"],
+  "statement": "Student by day, builder by habit. I design, build, and ship",
+  "statement_muted": "real products for real people.",
+  "about": [
+    "Hi, I'm Arnolt Arfa Nugraha, you can call me Arnolt. I'm a Software and Game Development (PPLG) student at SMK Telkom Purwokerto with an interest in technology, creativity, and digital business.",
+    "I run Avtrade Game, a business focused on buying and selling game accounts through secure and reliable transactions. Through this business, I've gained experience in management, customer service, and marketing, and I'm motivated to keep growing in the tech and business world."
+  ],
+  "closing": "Good products start with good questions. Design gives them form, code gives them life,",
+  "closing_muted": "and care for detail makes them last.",
+  "contact_title": "Let's build something meaningful",
+  "contact_text": "Have a project, an internship, or an idea you want to bring to life? Whether it needs a clean interface, a working website, or both, I'm happy to help turn it into reality.",
+  "email": "arnoltarfanugraha@gmail.com",
+  "footer_tag": "Sanssskuy",
+  "form_key": "a6e12cb2-62be-4603-a418-6a6048e304c2",
+  "cv_file": "/CV/CV-Arnolt-Arfa-Nugraha.pdf",
+  "cv_preview": "/media/cv-preview.webp",
+  "cv_updated": "September 2026",
+  "hero_images": ["/media/windiarto-home.webp", "/media/barurayatoys-home.webp", "/media/windiarto-product.webp", "/media/barurayatoys-catalog.webp"],
+  "decor_images": ["/media/windiarto-about.webp", "/media/barurayatoys-product.webp", "/media/windiarto-catalog.webp", "/media/defion.webp", "/media/barurayatoys-about.webp", "/media/windiarto-how-to-order.webp", "/media/personal-web-2.webp"],
+  "photo_hero": "/media/arnolt-blazer.webp",
+  "photo_about": "/media/arnolt-selfie.webp",
+  "socials": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/arnolt.ok"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/arnolt-arfa-nugraha-7451a8348"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Arnolt-09"
+    }
+  ]
+}

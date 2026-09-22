@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found — Arnolt</title>
+  <script>
+    // The old site had one page per section (and an older CV file). Send those links to the right place.
+    (function () {
+      var map = {
+        'my eduction.html': '/#education',
+        'my education.html': '/#education',
+        'certificate.html': '/#certificates',
+        'project.html': '/#work',
+        'figma.html': '/#work',
+        'my tech.html': '/#stack',
+        'cv.html': '/#cv',
+        'chatbot.html': '/#contact',
+        'cv inggris.pdf': '/CV/CV-Arnolt-Arfa-Nugraha.pdf'
+      };
+      var page = decodeURIComponent(location.pathname.split('/').pop() || '').toLowerCase();
+      if (map[page]) location.replace(map[page]);
+    })();
+  </script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid; place-items: center; text-align: center;
+      background: #0a0a0a; color: #ededed;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    h1 { font-size: clamp(4rem, 18vw, 12rem); line-height: 1; margin: 0; letter-spacing: -0.04em; }
+    p { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a8a; }
+    a { color: #ededed; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>404</h1>
+    <p>This page doesn't exist.</p>
+    <a href="/">[ Back to arnolt.id ]</a>
+  </main>
+</body>
+</html>

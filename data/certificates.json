@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "title": "AI Class ASEAN: AI for Youth",
+      "issuer": "ASEAN Foundation × Google.org",
+      "year": "2026",
+      "description": "Completed all 15 chapters (12 hours) of the AI learning modules for youth on AIClassASEAN.org, from AI basics, ethics, and data privacy to generative AI, prompting, and building simple AI-based tools.",
+      "image": "/media/cert-ai-class-asean.webp",
+      "more_images": ["/media/cert-ai-class-asean-2.webp"],
+      "verify_url": "",
+      "tags": ["Artificial Intelligence", "Generative AI"]
+    },
+    {
+      "title": "Belajar Dasar Pemrograman Web",
+      "issuer": "Dicoding Indonesia",
+      "year": "2026",
+      "description": "Competency certificate for Dicoding's 41-hour web programming fundamentals class: HTML structure and semantic elements, CSS styling and layouting, and pages that work well on mobile, closed with a final exam and a website project. Valid until August 2029.",
+      "image": "/media/cert-dicoding-web.webp",
+      "more_images": ["/media/cert-dicoding-web-2.webp", "/media/cert-dicoding-web-3.webp"],
+      "verify_url": "https://www.dicoding.com/certificates/JMZVL2YR3XN9",
+      "tags": ["HTML", "CSS"]
+    },
+    {
+      "title": "AI Ignition Training",
+      "issuer": "KUMPUL × AI Ignition Indonesia",
+      "year": "2026",
+      "description": "A 30-hour training from AI basics to breakthrough: productivity tools, prompt engineering, generative AI, large language models, and responsible AI. Part of the AI Opportunity Fund: Asia Pacific with AVPN, supported by Google.org and the Asian Development Bank.",
+      "image": "/media/cert-ai-ignition.webp",
+      "more_images": ["/media/cert-ai-ignition-2.webp"],
+      "verify_url": "",
+      "tags": ["Artificial Intelligence", "Prompt Engineering"]
+    },
+    {
+      "title": "DigiUp: Digital Marketing",
+      "issuer": "Telkom Indonesia",
+      "year": "2025",
+      "description": "A digital training and certification program from Telkom Indonesia that prepares vocational students for the needs of the digital industry. Completed with the grade Certified.",
+      "image": "/media/cert-digiup.webp",
+      "more_images": [],
+      "verify_url": "",
+      "tags": ["Marketing", "Digital"]
+    },
+    {
+      "title": "Azure AI Fundamentals (AI-900) Prep Course",
+      "issuer": "Microsoft × elevAIte",
+      "year": "2025",
+      "description": "A fundamental AI training program from Microsoft Azure that prepares participants to take and pass the AI-900 certification.",
+      "image": "/media/cert-azure-ai-900.webp",
+      "more_images": [],
+      "verify_url": "",
+      "tags": ["Microsoft", "Cloud AI"]
+    },
+    {
+      "title": "Estha.AI: From Students to Creator",
+      "issuer": "Estha × SMK Telkom Purwokerto",
+      "year": "2025",
+      "description": "Certificate of appreciation for taking part in the webinar on leveraging AI to address school needs. Estha is a no-code platform for building AI-powered apps such as chatbots and assistants.",
+      "image": "/media/cert-estha-ai.webp",
+      "more_images": [],
+      "verify_url": "",
+      "tags": ["Artificial Intelligence", "No-code"]
+    }
+  ]
+}

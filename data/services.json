@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "title": "UI/UX Design",
+      "summary": "Designing digital experiences that feel intuitive, clear, and purposeful, from wireframes to high-fidelity screens in Figma.",
+      "deliverables": ["User flows", "Wireframing", "High-fidelity UI", "Design systems", "Interactive prototypes", "Responsive layouts"],
+      "image": "/media/grabtrash.webp"
+    },
+    {
+      "title": "Web Development",
+      "summary": "Building fast, responsive websites and web apps with Laravel, Tailwind, and JavaScript, then putting them online on a real domain.",
+      "deliverables": ["Company & store websites", "Admin dashboards", "Payment & WhatsApp integration", "Database design", "Hosting & deployment", "SEO basics"],
+      "image": "/media/windiarto-home.webp"
+    },
+    {
+      "title": "Mobile Apps",
+      "summary": "Crafting mobile experiences for Android, from the first concept in Figma to a working Kotlin app connected to its own API.",
+      "deliverables": ["App UI design", "Kotlin Android apps", "REST API with Laravel", "Login & user accounts", "Product catalogs", "Checkout flows"],
+      "image": "/media/suki-floris.webp"
+    },
+    {
+      "title": "Game Development",
+      "summary": "Exploring game worlds in Unity and Unreal Engine: movement, collisions, atmosphere, and simple gameplay loops.",
+      "deliverables": ["2D games in Unity (C#)", "3D games in Unreal (Blueprint)", "Player controls", "Level design", "Collectibles & scoring", "Lighting & mood"],
+      "image": "/media/horror-game-3d.webp"
+    },
+    {
+      "title": "Prototyping",
+      "summary": "Turning ideas into clickable prototypes to test and validate them before a single line of production code is written.",
+      "deliverables": ["Clickable mockups", "User testing", "Landing pages", "Portfolio sites", "Pitch visuals", "Quick iterations"],
+      "image": "/media/lokerku.webp"
+    },
+    {
+      "title": "Digital Business",
+      "summary": "Running Avtrade Game, a marketplace for game accounts, taught me how products meet customers: trust, service, and marketing.",
+      "deliverables": ["Online store operations", "Customer service", "Secure transactions", "Social media marketing", "Pricing", "Brand building"],
+      "image": "/media/barurayatoys-home.webp"
+    }
+  ]
+}

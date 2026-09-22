@@ -1,0 +1,200 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Dashboard for arnolt.id (Sveltia CMS).
+# Every "Save" becomes a commit on GitHub; GitHub Pages republishes the site ~1 minute later.
+
+backend:
+  name: github
+  repo: Arnolt-09/Personal_Website_3.0
+  branch: main
+  commit_messages:
+    create: "Dashboard: tambah {{collection}} “{{slug}}”"
+    update: "Dashboard: ubah {{collection}} “{{slug}}”"
+    delete: "Dashboard: hapus {{collection}} “{{slug}}”"
+    uploadMedia: "Dashboard: unggah {{path}}"
+    deleteMedia: "Dashboard: hapus {{path}}"
+
+site_url: https://arnolt.id
+display_url: https://arnolt.id
+media_folder: /media
+public_folder: /media
+
+collections:
+  - name: konten
+    label: Isi Website
+    description: Semua tulisan, foto, dan link yang tampil di arnolt.id.
+    editor:
+      preview: false
+    files:
+      # ------------------------------------------------------------------
+      - name: projects
+        label: Proyek
+        file: data/projects.json
+        fields:
+          - name: items
+            label: Daftar proyek
+            label_singular: proyek
+            widget: list
+            hint: Urutan di sini = urutan di website. Seret untuk memindahkan.
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - { name: title, label: Nama proyek, widget: string }
+              - name: category
+                label: Jenis
+                widget: select
+                options: [Web, Mobile, Game, Design]
+                hint: Dipakai untuk tombol saring di atas daftar proyek.
+              - { name: year, label: Tahun, widget: string }
+              - { name: role, label: Peranmu, widget: string, required: false, hint: "Contoh: Design & Development" }
+              - { name: summary, label: Penjelasan singkat, widget: text }
+              - name: tags
+                label: Teknologi yang dipakai
+                widget: list
+                required: false
+                hint: Tulis satu per baris atau pisahkan dengan koma, contoh Laravel, MySQL
+              - { name: cover, label: Foto utama, widget: image, hint: Tampil di daftar proyek dan saat kursor diarahkan. }
+              - name: gallery
+                label: Foto lainnya (galeri)
+                widget: list
+                required: false
+                hint: Tampil saat proyek diklik. Foto pertama sebaiknya sama dengan foto utama.
+                field: { name: image, label: Foto, widget: image }
+              - { name: live_url, label: Link website (kalau sudah online), widget: string, required: false }
+              - { name: repo_url, label: Link GitHub (kalau publik), widget: string, required: false }
+              - name: featured
+                label: Tampilkan di tumpukan foto beranda
+                widget: boolean
+                default: false
+                required: false
+
+      # ------------------------------------------------------------------
+      - name: certificates
+        label: Sertifikat
+        file: data/certificates.json
+        fields:
+          - name: items
+            label: Daftar sertifikat
+            label_singular: sertifikat
+            widget: list
+            hint: Urutan di sini = urutan di website. Taruh yang terbaru paling atas.
+            summary: "{{fields.title}} ({{fields.year}})"
+            fields:
+              - { name: title, label: Nama sertifikat, widget: string }
+              - { name: issuer, label: Penerbit, widget: string, hint: "Contoh: Telkom Indonesia" }
+              - { name: year, label: Tahun, widget: string }
+              - { name: description, label: Keterangan, widget: text, required: false }
+              - { name: image, label: Foto sertifikat, widget: image }
+              - name: more_images
+                label: Halaman lain (opsional)
+                widget: list
+                required: false
+                hint: Misalnya halaman daftar modul. Tampil sebagai foto kecil saat sertifikat dibuka.
+                field: { name: image, label: Foto, widget: image }
+              - { name: verify_url, label: Link cek keaslian (opsional), widget: string, required: false, hint: "Contoh: link verifikasi dari Dicoding" }
+              - { name: tags, label: Label kecil, widget: list, required: false }
+
+      # ------------------------------------------------------------------
+      - name: education
+        label: Pendidikan
+        file: data/education.json
+        fields:
+          - { name: title, label: Judul besar, widget: string }
+          - { name: intro, label: Cerita singkat (di bawah foto), widget: text }
+          - name: items
+            label: Daftar sekolah
+            label_singular: sekolah
+            widget: list
+            hint: Taruh yang terbaru paling atas.
+            summary: "{{fields.school}} ({{fields.years}})"
+            fields:
+              - { name: school, label: Nama sekolah, widget: string }
+              - { name: program, label: Jurusan / jenjang, widget: string, required: false }
+              - { name: years, label: Tahun, widget: string, hint: "Contoh: 2024 – Now" }
+              - { name: description, label: Keterangan, widget: text, required: false }
+              - { name: map_url, label: Link Google Maps, widget: string, required: false }
+
+      # ------------------------------------------------------------------
+      - name: stack
+        label: Tech Stack
+        file: data/stack.json
+        fields:
+          - name: groups
+            label: Kelompok
+            label_singular: kelompok
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Nama kelompok, widget: string, hint: "Contoh: Languages" }
+              - { name: items, label: Isi, widget: list, hint: "Pisahkan dengan koma, contoh: HTML, CSS, JavaScript" }
+
+      # ------------------------------------------------------------------
+      - name: services
+        label: Keahlian (What I do)
+        file: data/services.json
+        fields:
+          - name: items
+            label: Daftar keahlian
+            label_singular: keahlian
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Nama keahlian, widget: string }
+              - { name: summary, label: Kalimat penjelas, widget: text }
+              - { name: deliverables, label: Yang bisa dikerjakan, widget: list }
+              - { name: image, label: Foto latar, widget: image }
+
+      # ------------------------------------------------------------------
+      - name: profile
+        label: Profil, Beranda & CV
+        file: data/profile.json
+        fields:
+          - { name: name, label: Nama lengkap, widget: string }
+          - { name: wordmark, label: Nama pendek (logo atas & tulisan raksasa di bawah), widget: string }
+          - { name: role, label: Jabatan singkat, widget: string }
+          - { name: hero_left, label: Judul beranda — kiri, widget: string }
+          - { name: hero_right, label: Judul beranda — kanan, widget: string }
+          - { name: hero_intro, label: Teks kecil beranda — kiri, widget: text }
+          - { name: hero_side, label: Teks kecil beranda — kanan, widget: text }
+          - name: hero_images
+            label: Tumpukan foto di tengah beranda
+            widget: list
+            max: 4
+            hint: Maksimal 4 foto. Kalau kosong, diambil dari proyek yang dicentang "tumpukan foto beranda".
+            field: { name: image, label: Foto, widget: image }
+          - name: decor_images
+            label: Foto hiasan melayang (About & sekitar foto besar)
+            widget: list
+            max: 7
+            hint: Urutan 1–2 tampil di bagian About, 3–7 di sekitar foto besar. Pakai screenshot website supaya rapi.
+            field: { name: image, label: Foto, widget: image }
+          - { name: tape_words, label: Tulisan di pita miring, widget: list }
+          - { name: statement, label: Kalimat besar About — bagian putih, widget: text }
+          - { name: statement_muted, label: Kalimat besar About — bagian abu-abu, widget: text }
+          - name: about
+            label: Paragraf About Me
+            widget: list
+            field: { name: paragraph, label: Paragraf, widget: text }
+          - { name: photo_about, label: Foto di bagian Pendidikan, widget: image }
+          - { name: photo_hero, label: Foto besar (sebelum CV), widget: image, hint: Paling bagus foto tanpa latar (PNG/WebP transparan). }
+          - { name: closing, label: Kalimat penutup — bagian putih, widget: text }
+          - { name: closing_muted, label: Kalimat penutup — bagian abu-abu, widget: text }
+          - { name: cv_file, label: File CV (PDF), widget: file }
+          - { name: cv_preview, label: Gambar halaman depan CV, widget: image, hint: Screenshot halaman pertama CV. }
+          - { name: cv_updated, label: CV terakhir diperbarui, widget: string, hint: "Contoh: September 2026" }
+          - { name: contact_title, label: Judul bagian kontak, widget: string }
+          - { name: contact_text, label: Teks bagian kontak, widget: text }
+          - { name: email, label: Email, widget: string }
+          - { name: footer_tag, label: Tulisan tengah paling bawah, widget: string, required: false, hint: "Contoh: Sanssskuy" }
+          - name: form_key
+            label: Kunci formulir kontak (Web3Forms)
+            widget: string
+            required: false
+            hint: Didapat gratis dari web3forms.com, dikirim ke email kamu. Kunci ini memang boleh terlihat publik. Kalau kosong, tombol kirim akan membuka aplikasi email pengunjung.
+          - name: socials
+            label: Media sosial
+            label_singular: akun
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Nama, widget: string, hint: "Contoh: Instagram" }
+              - { name: url, label: Link, widget: string }

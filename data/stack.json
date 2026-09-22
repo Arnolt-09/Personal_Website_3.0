@@ -1,0 +1,10 @@
+{
+  "groups": [
+    { "name": "Languages", "items": ["HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Kotlin", "C#"] },
+    { "name": "Frameworks & Libraries", "items": ["Laravel", "Blade", "Tailwind CSS", "Alpine.js", "React", "Vite"] },
+    { "name": "Data & Backend", "items": ["MySQL", "REST API", "Midtrans Payment", "Google Login", "WhatsApp API", "Gemini AI"] },
+    { "name": "Game Development", "items": ["Unity", "Unreal Engine", "Blueprint"] },
+    { "name": "Design & Media", "items": ["Figma", "Adobe Illustrator", "Photoshop", "Canva", "DaVinci Resolve"] },
+    { "name": "Tools & Deploy", "items": ["VS Code", "Visual Studio", "Android Studio", "Git & GitHub", "Laragon", "cPanel Hosting", "GitHub Pages"] }
+  ]
+}

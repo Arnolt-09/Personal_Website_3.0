@@ -1,0 +1,27 @@
+{
+  "title": "A journey built on curiosity and practice.",
+  "intro": "My journey started at SD Palm Kids Purwokerto and continued at SMP Puhua, where I first grew curious about technology and the digital world. I then chose SMK Telkom Purwokerto, majoring in Software and Game Development (PPLG), where I'm deepening my skills in software development, programming, and digital technology.",
+  "items": [
+    {
+      "school": "SMK Telkom Purwokerto",
+      "program": "Software and Game Development (PPLG)",
+      "years": "2024 – Now",
+      "description": "Currently in Grade 12, focusing on software development, programming, and digital technology.",
+      "map_url": "https://maps.app.goo.gl/Nsk2Htgxea4YYNHVA"
+    },
+    {
+      "school": "SMP Puhua",
+      "program": "Junior High School",
+      "years": "2021 – 2024",
+      "description": "Where I first discovered my passion for technology and the digital world.",
+      "map_url": "https://maps.app.goo.gl/YFJSKNXbq92tfYYJ7"
+    },
+    {
+      "school": "SD Palm Kids Purwokerto",
+      "program": "Elementary School",
+      "years": "2015 – 2021",
+      "description": "Where it all began: my first years of learning, reading, and curiosity.",
+      "map_url": ""
+    }
+  ]
+}
