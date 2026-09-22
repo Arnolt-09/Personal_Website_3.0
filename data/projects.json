@@ -8,7 +8,7 @@
       "summary": "A catalog website for a machinery store. Buyers browse, compare, and order straight through WhatsApp without creating an account, while the owner manages everything from an admin dashboard: products, banners, agenda reminders, and every piece of text on the site.",
       "tags": ["Laravel", "Tailwind CSS", "MySQL", "WhatsApp"],
       "cover": "/media/windiarto-home.webp",
-      "gallery": ["/media/windiarto-home.webp", "/media/windiarto-catalog.webp", "/media/windiarto-product.webp"],
+      "gallery": ["/media/windiarto-home.webp", "/media/windiarto-catalog.webp", "/media/windiarto-product.webp", "/media/windiarto-admin-dashboard.webp", "/media/windiarto-admin-products.webp", "/media/windiarto-admin-agenda.webp"],
       "live_url": "https://windiarto.com",
       "repo_url": "",
       "featured": true
@@ -21,7 +21,7 @@
       "summary": "An online toy store with a full shopping flow: product catalog, cart, checkout with Midtrans payment, shipping costs, Google login, WhatsApp order updates, a bilingual interface, and an admin panel with staff roles.",
       "tags": ["Laravel", "Alpine.js", "Midtrans", "MySQL"],
       "cover": "/media/barurayatoys-home.webp",
-      "gallery": ["/media/barurayatoys-home.webp", "/media/barurayatoys-catalog.webp", "/media/barurayatoys-product.webp"],
+      "gallery": ["/media/barurayatoys-home.webp", "/media/barurayatoys-catalog.webp", "/media/barurayatoys-product.webp", "/media/barurayatoys-user-orders.webp", "/media/barurayatoys-user-account.webp", "/media/barurayatoys-admin-dashboard.webp", "/media/barurayatoys-admin-products.webp"],
       "live_url": "https://barurayatoys.com",
       "repo_url": "",
       "featured": true
