@@ -551,7 +551,8 @@
     const nav = $('[data-nav]');
     let last = 0;
     const onScroll = (y) => {
-      nav.classList.toggle('is-hidden', y > 240 && y > last && menu.hidden);
+      // hide on scroll down only on desktop; on phones the header stays still (iOS glitch)
+      nav.classList.toggle('is-hidden', !narrow.matches && y > 240 && y > last && menu.hidden);
       nav.classList.toggle('is-scrolled', y > 40); // phones: solid bar behind the logo
       last = y;
     };
