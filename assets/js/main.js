@@ -747,8 +747,10 @@
     // hero: words drift apart, collage floats upward at different speeds
     gsap.to('.hero__word--left', { xPercent: -14, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     gsap.to('.hero__word--right', { xPercent: 14, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    // Parallax uses yPercent, NOT y: the intro animates y (from 140px), and a scroll tween on the
+    // same property would record 140px as its start and push the images down over the text.
     $$('.hero__collage figure').forEach((f) => {
-      gsap.to(f, { y: () => -window.innerHeight * 0.25 * +f.dataset.speed, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.fromTo(f, { yPercent: 0 }, { yPercent: -45 * +f.dataset.speed, ease: 'none', immediateRender: false, scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     });
 
     // generic parallax (desktop only: on phones the floating shots would slide over the text)

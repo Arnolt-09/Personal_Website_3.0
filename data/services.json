@@ -31,10 +31,10 @@
       "image": "/media/lokerku.webp"
     },
     {
-      "title": "Digital Business",
-      "summary": "Running Avtrade Game, a marketplace for game accounts, taught me how products meet customers: trust, service, and marketing.",
-      "deliverables": ["Online store operations", "Customer service", "Secure transactions", "Social media marketing", "Pricing", "Brand building"],
-      "image": "/media/barurayatoys-home.webp"
+      "title": "Website Services",
+      "summary": "Need a website for your business? I build it for you, from a company profile to an online store with an admin dashboard, and put it online on your own domain.",
+      "deliverables": ["Company profile websites", "Online stores & catalogs", "Admin dashboard to edit content", "WhatsApp & payment integration", "Domain, hosting & SSL setup", "Maintenance & updates"],
+      "image": "/media/barurayatoys-admin-dashboard.webp"
     }
   ]
 }
