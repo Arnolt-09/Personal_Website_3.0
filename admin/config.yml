@@ -158,8 +158,8 @@ collections:
           - name: hero_images
             label: Tumpukan foto di tengah beranda
             widget: list
-            max: 4
-            hint: Maksimal 4 foto. Kalau kosong, diambil dari proyek yang dicentang "tumpukan foto beranda".
+            max: 5
+            hint: Maksimal 5 foto. Kalau kosong, diambil dari proyek yang dicentang "tumpukan foto beranda".
             field: { name: image, label: Foto, widget: image }
           - name: decor_images
             label: Foto hiasan melayang (About & sekitar foto besar)

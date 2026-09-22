@@ -38,6 +38,25 @@
   const img = (path, alt = '', attrs = {}) =>
     el('img', { src: src(path), alt, loading: 'lazy', decoding: 'async', ...attrs });
 
+  // Line icons as inline SVG: arrow characters like ↗ turn into coloured emoji on some phones.
+  const ICONS = {
+    'up-right': 'M7 17 17 7M8 7h9v9',
+    up: 'M12 19V5M6 11l6-6 6 6',
+  };
+  function icon(name) {
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('class', 'icon');
+    svg.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', ICONS[name]);
+    svg.append(path);
+    return svg;
+  }
+  // "[ Label ↗ ]" style link text
+  const bracket = (label, iconName = 'up-right') => ['[ ', label, ' ', icon(iconName), ' ]'];
+
   /* ---------------- data ---------------- */
 
   const FILES = ['profile', 'services', 'education', 'projects', 'certificates', 'stack'];
@@ -105,9 +124,9 @@
 
     // hero collage: chosen in profile.json, topped up with featured project covers
     const featured = projects.filter((p) => p.featured).map((p) => p.cover);
-    const heroImgs = [...new Set([...(profile.hero_images || []), ...featured, ...covers])].filter(Boolean).slice(0, 4);
+    const heroImgs = [...new Set([...(profile.hero_images || []), ...featured, ...covers])].filter(Boolean).slice(0, 5);
     $('[data-hero-collage]').replaceChildren(
-      ...heroImgs.map((c, i) => el('figure', { dataset: { speed: [0.5, 0.9, 0.25, 1.2][i] } }, img(c, '', { loading: 'eager' })))
+      ...heroImgs.map((c, i) => el('figure', { dataset: { speed: [0.5, 0.9, 0.25, 1.2, 0.7][i] } }, img(c, '', { loading: 'eager' })))
     );
 
     // floating decoration (About + big portrait): chosen in profile.json, else other project shots
@@ -212,7 +231,7 @@
             { class: 'step__body' },
             el('span', { class: 'step__meta', text: [e.program, e.years].filter(Boolean).join('  ·  ') }),
             e.description && el('p', { text: e.description }),
-            e.map_url && el('a', { class: 'step__map', href: src(e.map_url), target: '_blank', rel: 'noopener', text: 'View location ↗' })
+            e.map_url && el('a', { class: 'step__map', href: src(e.map_url), target: '_blank', rel: 'noopener' }, 'View location ', icon('up-right'))
           )
         )
       )
@@ -237,7 +256,7 @@
             el('span', { class: 'work__name', text: p.title }),
             el('span', { class: 'work__cat', text: [p.category, p.role].filter(Boolean).join(' — ') }),
             el('span', { class: 'work__year', text: p.year }),
-            el('span', { class: 'work__arrow', 'aria-hidden': 'true', text: '↗' })
+            el('span', { class: 'work__arrow', 'aria-hidden': 'true' }, icon('up-right'))
           )
         )
       )
@@ -254,8 +273,8 @@
           tags: p.tags,
           images: p.gallery && p.gallery.length ? p.gallery : [p.cover],
           links: [
-            p.live_url && { href: p.live_url, text: '[ Visit site ↗ ]' },
-            p.repo_url && { href: p.repo_url, text: '[ Source code ↗ ]' },
+            p.live_url && { href: p.live_url, label: 'Visit site' },
+            p.repo_url && { href: p.repo_url, label: 'Source code' },
           ].filter(Boolean),
         })
       );
@@ -385,8 +404,8 @@
         tags: c.tags,
         images: [c.image, ...(c.more_images || [])].filter(Boolean),
         links: [
-          c.verify_url && { href: c.verify_url, text: '[ Verify certificate ↗ ]' },
-          { href: c.image, text: '[ Open full image ↗ ]' },
+          c.verify_url && { href: c.verify_url, label: 'Verify certificate' },
+          { href: c.image, label: 'Open full image' },
         ].filter(Boolean),
       });
 
@@ -461,7 +480,7 @@
     $('[data-viewer-text]', viewer).textContent = [meta, text].filter(Boolean).join(' — ');
     $('[data-viewer-tags]', viewer).replaceChildren(...tags.map((t) => el('li', { text: t })));
     $('[data-viewer-links]', viewer).replaceChildren(
-      ...links.map((l) => el('a', { class: 'btn', href: src(l.href), target: '_blank', rel: 'noopener', text: l.text }))
+      ...links.map((l) => el('a', { class: 'btn', href: src(l.href), target: '_blank', rel: 'noopener' }, bracket(l.label)))
     );
 
     const show = (i) => {
@@ -533,6 +552,7 @@
     let last = 0;
     const onScroll = (y) => {
       nav.classList.toggle('is-hidden', y > 240 && y > last && menu.hidden);
+      nav.classList.toggle('is-scrolled', y > 40); // phones: solid bar behind the logo
       last = y;
     };
     if (lenis) lenis.on('scroll', ({ scroll }) => onScroll(scroll));
@@ -731,8 +751,8 @@
       gsap.to(f, { y: () => -window.innerHeight * 0.25 * +f.dataset.speed, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     });
 
-    // generic parallax
-    $$('[data-parallax]').forEach((n) => {
+    // generic parallax (desktop only: on phones the floating shots would slide over the text)
+    if (!narrow.matches) $$('[data-parallax]').forEach((n) => {
       const s = parseFloat(n.dataset.parallax) || 0.2;
       gsap.fromTo(n, { y: () => -s * 300 }, { y: () => s * 300, ease: 'none', scrollTrigger: { trigger: n.parentElement, start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });
     });

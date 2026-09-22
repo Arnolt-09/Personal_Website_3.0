@@ -274,7 +274,8 @@ html:not(.js) .preloader { display: none; }
 .hero__collage figure:nth-child(1) { top: 0;   left: 4%;  width: 80%;  aspect-ratio: 16 / 10; z-index: 2; }
 .hero__collage figure:nth-child(2) { top: 27%; left: 22%; width: 72%;  aspect-ratio: 16 / 10; z-index: 3; }
 .hero__collage figure:nth-child(3) { bottom: 0; left: 0;   width: 96%;  aspect-ratio: 16 / 10; z-index: 1; } /* anchored to the bottom so it never covers the buttons */
-.hero__collage figure:nth-child(4) { top: 9%;  left: 80%; width: 36%;  aspect-ratio: 3 / 4;   z-index: 1; }
+.hero__collage figure:nth-child(4) { top: 9%;  left: 80%; width: 42%;  aspect-ratio: 16 / 10;  z-index: 1; }
+.hero__collage figure:nth-child(5) { top: 14%; left: -30%; width: 40%; aspect-ratio: 16 / 10; z-index: 4; }
 
 .hero__title {
   grid-column: 1 / -1; grid-row: 2;
@@ -364,6 +365,7 @@ html:not(.js) .preloader { display: none; }
 .statement__foot {
   display: flex; justify-content: space-between; align-items: flex-end; gap: 32px;
   max-width: 1100px; margin: clamp(60px, 9vw, 120px) auto 0; text-align: left;
+  position: relative; z-index: 2;
 }
 .statement__about { display: grid; gap: 14px; max-width: 58ch; }
 .statement__about p { font-size: var(--fs-sm); line-height: 1.6; color: var(--muted); }
@@ -371,8 +373,8 @@ html:not(.js) .preloader { display: none; }
 
 .float { position: absolute; z-index: 1; overflow: hidden; background: #1a1a1a; }
 .float img { width: 100%; height: 100%; object-fit: cover; object-position: left top; filter: grayscale(1); opacity: 0.85; }
-.float--a { left: 6%; top: 44%; width: clamp(120px, 16vw, 250px); aspect-ratio: 4 / 5; }
-.float--b { right: 8%; top: 12%; width: clamp(130px, 15vw, 240px); aspect-ratio: 16 / 11; }
+.float--a { left: 6%; top: 44%; width: clamp(120px, 16vw, 250px); aspect-ratio: 16 / 10; }
+.float--b { right: 8%; top: 12%; width: clamp(130px, 15vw, 240px); aspect-ratio: 16 / 10; }
 
 /* ---------- services ---------- */
 
@@ -527,11 +529,18 @@ html:not(.js) .preloader { display: none; }
   font-variation-settings: "wdth" 106; color: var(--text);
   transition: transform 0.5s var(--ease);
 }
-.work__arrow { justify-self: end; font-size: 1.1rem; transition: transform 0.5s var(--ease); }
+.work__arrow { justify-self: end; display: inline-flex; font-size: 1.25rem; transition: transform 0.5s var(--ease); }
+
+/* inline line icons (replace arrow characters that some phones show as emoji) */
+.icon {
+  width: 1em; height: 1em; flex: none; display: inline-block; vertical-align: -0.14em;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; stroke-linejoin: miter;
+}
+.btn .icon, .step__map .icon, .footer__bottom .icon { width: 0.95em; height: 0.95em; margin: 0 0.1em; }
 .work__thumb { display: none; }
 .work__list:hover .work__name { color: var(--dim); }
 .work__list:hover .work__link:hover .work__name { color: var(--text); transform: translateX(12px); }
-.work__link:hover .work__arrow { transform: rotate(-45deg); }
+.work__link:hover .work__arrow { transform: translate(3px, -3px); }
 .work__link:focus-visible { outline-offset: -4px; }
 
 .work__preview {
@@ -639,9 +648,9 @@ html:not(.js) .preloader { display: none; }
 .portrait__floats img { width: 100%; height: 100%; object-fit: cover; object-position: left top; filter: grayscale(1); }
 .portrait__floats figure:nth-child(1) { left: 11%; top: 18%; width: clamp(110px, 14vw, 220px); aspect-ratio: 16 / 10; }
 .portrait__floats figure:nth-child(2) { left: 30%; top: 7%;  width: clamp(120px, 15vw, 240px); aspect-ratio: 16 / 10; z-index: -1; }
-.portrait__floats figure:nth-child(3) { right: 12%; top: 30%; width: clamp(110px, 13vw, 210px); aspect-ratio: 16 / 11; }
+.portrait__floats figure:nth-child(3) { right: 12%; top: 30%; width: clamp(110px, 13vw, 210px); aspect-ratio: 16 / 10; }
 .portrait__floats figure:nth-child(4) { right: 22%; bottom: 20%; width: clamp(120px, 14vw, 230px); aspect-ratio: 16 / 10; z-index: 3; }
-.portrait__floats figure:nth-child(5) { left: 16%; bottom: 26%; width: clamp(100px, 12vw, 190px); aspect-ratio: 4 / 3; z-index: 3; }
+.portrait__floats figure:nth-child(5) { left: 16%; bottom: 26%; width: clamp(100px, 12vw, 190px); aspect-ratio: 16 / 10; z-index: 3; }
 .tapes--portrait { height: 260px; bottom: 0; z-index: 4; }
 .tape--c { bottom: 110px; transform: rotate(3deg); }
 .tape--d { bottom: 40px; transform: rotate(-2.4deg); background: #bdbdbd; }
@@ -783,6 +792,7 @@ html:not(.js) .preloader { display: none; }
   .hero__collage figure:nth-child(2) { left: 30%; width: 62%; top: 26%; }
   .hero__collage figure:nth-child(3) { left: 4%;  width: 78%; bottom: 0; }
   .hero__collage figure:nth-child(4) { left: 72%; width: 26%; top: 4%; }
+  .hero__collage figure:nth-child(5) { left: 0;   width: 34%; top: 30%; }
   .hero__title { grid-row: 1; grid-template-columns: 1fr; row-gap: 4px; font-size: clamp(2.6rem, 13vw, 5rem); }
   .hero__word--left, .hero__word--right { grid-column: 1; }
   .hero__rule { display: none; }
@@ -794,9 +804,15 @@ html:not(.js) .preloader { display: none; }
   .tape--a { bottom: 52px; }
   .tape--b { bottom: 8px; }
 
-  .float--a { left: -6%; top: auto; bottom: 36%; }
-  .float--b { right: -4%; top: 6%; }
+  /* phones: both floating shots sit in the empty space above the heading, never over the text */
+  .statement { padding-top: 250px; }
+  .float--a { left: var(--gutter); top: 64px; bottom: auto; width: 30vw; max-width: 150px; }
+  .float--b { right: var(--gutter); top: 96px; width: 42vw; max-width: 210px; }
   .statement__foot { flex-direction: column; align-items: flex-start; }
+
+  /* header gets its own dark bar once you scroll, so tapes/images never run through the logo */
+  .nav { transition: transform 0.6s var(--ease), background-color 0.3s; }
+  .nav.is-scrolled { mix-blend-mode: normal; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 
   .services__grid { grid-template-columns: 1fr; }
   .services__item { padding-left: var(--gutter); }
